@@ -61,26 +61,26 @@ except Exception as e:
 
 # Form Alanlarını Doldur
 # Tam İsim
-driver.find_element(By.XPATH, '/html/body/ui-view/div/main/div/div[1]/ui-view/form/div[3]/div[1]/input').send_keys("MacroShop")
+driver.find_element(By.XPATH, '/html/body/div/div/main/div/div/div[1]/form/div[3]/div[1]/input').send_keys("MacroShop")
 
 # E-posta
 email = random_email()
-driver.find_element(By.XPATH, '/html/body/ui-view/div/main/div/div[1]/ui-view/form/div[3]/div[2]/input').send_keys(email)
+driver.find_element(By.XPATH, '/html/body/div/div/main/div/div/div[1]/form/div[3]/div[2]/input').send_keys(email)
 
 # Şifre
 password = random_password()
-driver.find_element(By.XPATH, '/html/body/ui-view/div/main/div/div[1]/ui-view/form/div[3]/div[3]/div[1]/input').send_keys(password)
+driver.find_element(By.XPATH, '/html/body/div/div/main/div/div/div[1]/form/div[3]/div[3]/div[2]/input').send_keys(password)
 
 # Kullanım Koşullarını Onayla
 try:
-    terms_checkbox = driver.find_element(By.XPATH, '/html/body/ui-view/div/main/div/div[1]/ui-view/form/div[3]/div[5]/div/input')
+    terms_checkbox = driver.find_element(By.XPATH, '/html/body/div/div/main/div/div/div[1]/form/div[3]/div[5]/div/input')
     driver.execute_script("arguments[0].click();", terms_checkbox)
 except:
     print("Kullanım koşulları kutucuğu bulunamadı!")
 
 # Hesap Oluştur Butonuna Tıkla
 try:
-    create_account_button = driver.find_element(By.XPATH, '/html/body/ui-view/div/main/div/div[1]/ui-view/form/div[4]/div/div[2]/button')
+    create_account_button = driver.find_element(By.XPATH, '/html/body/div/div/main/div/div/div[1]/form/div[4]/div/div[1]/button')
     driver.execute_script("arguments[0].click();", create_account_button)
 except:
     print("'Hesap Oluştur' butonu bulunamadı!")
